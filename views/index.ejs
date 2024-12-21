@@ -9,14 +9,19 @@
             <form method="POST" action="/activities/donate">
                 <input placeholder="your name" type="text" name="userName">
                 <input placeholder="password " type="text" name="password">
-                <select name="activityName">
+                <select name="actibityName">
                     <% activities.forEach( (activity) => { %>
-                    <option value=<%= activity.name %>> <%= activity.name %> </option>
+                    <option value=<%= activity.name %>> <%= activity.name %></option>
                     <% }) %>
-                </select>
-                <input placeholder="amount of money" type="number" name="money">
-                <button type="submit">Donate</button>
+            </select>
+            <input placeholder="amount of money" type="number" name="money">
+            <button type="submit">Donate</button>
             </form>
+            <h2>Check user money</h2>
+            <form method="POST" action="/users/check">
+                <input placeholder="your name" type="text" name="userName">
+                <input placeholder="password " type="text" name="password">
+                <button type="submit">Check</button>
             </main>
         </body>
     </head>
